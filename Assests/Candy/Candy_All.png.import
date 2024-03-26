@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3y8wrf75i1c5"
-path="res://.godot/imported/M484SuperCandySetV2.png-7699334625ee01b9b4c5eb51f88e0b45.ctex"
+uid="uid://djnyrvwx77rh8"
+path="res://.godot/imported/Candy_All.png-88adba736f150713d8bb116888aebf36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/M484SuperCandySetV2.png"
-dest_files=["res://.godot/imported/M484SuperCandySetV2.png-7699334625ee01b9b4c5eb51f88e0b45.ctex"]
+source_file="res://Assests/Candy/Candy_All.png"
+dest_files=["res://.godot/imported/Candy_All.png-88adba736f150713d8bb116888aebf36.ctex"]
 
 [params]
 
