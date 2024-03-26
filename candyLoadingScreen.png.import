@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmg8ei847reou"
-path="res://.godot/imported/7.jpg-ec6e99acd44148075540d394f265c72f.ctex"
+uid="uid://jbbwjcriqpt3"
+path="res://.godot/imported/candyLoadingScreen.png-074e306a5002bc5dd9d501949fed76bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/Floor/7.jpg"
-dest_files=["res://.godot/imported/7.jpg-ec6e99acd44148075540d394f265c72f.ctex"]
+source_file="res://candyLoadingScreen.png"
+dest_files=["res://.godot/imported/candyLoadingScreen.png-074e306a5002bc5dd9d501949fed76bb.ctex"]
 
 [params]
 

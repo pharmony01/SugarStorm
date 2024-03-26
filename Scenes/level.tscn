@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://dixr6rmf1emu6"]
+[gd_scene load_steps=3 format=3 uid="uid://ddeumutpgiqkh"]
+
+[ext_resource type="PackedScene" uid="uid://6gvnsf0ag7y1" path="res://scenes/floor.tscn" id="1_g1bxk"]
+[ext_resource type="PackedScene" uid="uid://b677mm2hxrb80" path="res://scenes/player_gun.tscn" id="2_b0t4c"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_g1bxk")]
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_b0t4c")]
+position = Vector2(604, 330)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmg8ei847reou"
-path="res://.godot/imported/7.jpg-ec6e99acd44148075540d394f265c72f.ctex"
+uid="uid://176vn7gkqu01"
+path="res://.godot/imported/New_Project_4.png-e900f32936fd9647ca5fd99874bf44d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/Floor/7.jpg"
-dest_files=["res://.godot/imported/7.jpg-ec6e99acd44148075540d394f265c72f.ctex"]
+source_file="res://assests/Player/New_Project_4.png"
+dest_files=["res://.godot/imported/New_Project_4.png-e900f32936fd9647ca5fd99874bf44d3.ctex"]
 
 [params]
 

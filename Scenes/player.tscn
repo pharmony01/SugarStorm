@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg3lno8pxvnl3"]
+
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_jg317"]
+[ext_resource type="Texture2D" uid="uid://ct2eej72lrebx" path="res://assests/Player/pngwing.com_37.png" id="2_fbf4q"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_jg317")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("2_fbf4q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, 44, 17, 44, 31, 30, 31, -35, 23, -46, -22, -46, -32, -27)
