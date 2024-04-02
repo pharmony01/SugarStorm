@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3y8wrf75i1c5"
-path="res://.godot/imported/M484SuperCandySetV2.png-2c9618b7b31121aea9aeae7b865343d2.ctex"
+uid="uid://dqbjam3d0q7x1"
+path="res://.godot/imported/candyLand_tileset_v1_1.png-3560a5b2e894ebd3af96a007926f307f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/Candy/M484SuperCandySetV2.png"
-dest_files=["res://.godot/imported/M484SuperCandySetV2.png-2c9618b7b31121aea9aeae7b865343d2.ctex"]
+source_file="res://Art/candyLand_tileset_v1_1.png"
+dest_files=["res://.godot/imported/candyLand_tileset_v1_1.png-3560a5b2e894ebd3af96a007926f307f.ctex"]
 
 [params]
 

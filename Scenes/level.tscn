@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ddeumutpgiqkh"]
 
-[ext_resource type="PackedScene" uid="uid://6gvnsf0ag7y1" path="res://scenes/floor.tscn" id="1_g1bxk"]
+[ext_resource type="PackedScene" uid="uid://6gvnsf0ag7y1" path="res://Scenes/floor.tscn" id="1_g1bxk"]
 [ext_resource type="PackedScene" uid="uid://b677mm2hxrb80" path="res://scenes/player_gun.tscn" id="2_b0t4c"]
 [ext_resource type="AudioStream" uid="uid://bl0t0gfy32cr3" path="res://audio/Voxel Revolution.mp3" id="3_0ucwk"]
 [ext_resource type="AudioStream" uid="uid://byx5wmxkpe27c" path="res://audio/Sergio%27s Magic Dustbin.mp3" id="3_3uxmo"]
