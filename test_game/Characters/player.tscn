@@ -9,8 +9,8 @@
 script = ExtResource("2_8t5e5")
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(0, -17)
-scale = Vector2(0.1, 0.1)
+position = Vector2(-5, -3)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("3_ud74y")
 
 [node name="FiniteStateMachine" parent="." index="2"]
