@@ -13,6 +13,7 @@ config_version=5
 config/name="Test Game"
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
+boot_splash/image="res://Art/candyLoadingScreen.png"
 config/icon="res://icon.svg"
 
 [display]

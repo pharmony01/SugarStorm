@@ -192,6 +192,6 @@ layer_0/tile_data = PackedInt32Array(0, 196612, 6, 65536, 196612, 6, 131072, 196
 [node name="Player" parent="." instance=ExtResource("1_jrvbb")]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-scale = Vector2(1.00193, 1.03181)
+scale = Vector2(0.997208, 0.991685)
 stream = SubResource("AudioStreamRandomizer_8ln48")
 autoplay = true
