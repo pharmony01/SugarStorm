@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dofegotxf1ga8"]
+[gd_scene load_steps=7 format=3 uid="uid://dofegotxf1ga8"]
 
 [ext_resource type="Script" path="res://TitleScreen.gd" id="1_5y7l3"]
+[ext_resource type="Texture2D" uid="uid://dnc54akbdx464" path="res://Art/background_image.png" id="2_2xaps"]
+[ext_resource type="Texture2D" uid="uid://dj2xllem8i474" path="res://Art/start_button.png" id="2_yfawu"]
+[ext_resource type="Texture2D" uid="uid://cw1vwwinb1e1w" path="res://Art/quit_button.png" id="3_n1do3"]
+[ext_resource type="Texture2D" uid="uid://cch02ychrkmem" path="res://Art/title_right.png" id="5_50hp6"]
+[ext_resource type="Texture2D" uid="uid://c5xodkukychlj" path="res://Art/title_left.png" id="6_aync6"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -11,13 +16,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5y7l3")
 
+[node name="BackgroundImage" type="Sprite2D" parent="."]
+scale = Vector2(0.469238, 0.593202)
+texture = ExtResource("2_2xaps")
+offset = Vector2(510.966, 227.183)
+
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 170.0
-offset_top = 56.0
+offset_top = 100.0
 offset_right = 310.0
-offset_bottom = 106.0
-text = "Start"
+offset_bottom = 150.0
+pivot_offset = Vector2(67, 25)
+icon = ExtResource("2_yfawu")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 0
@@ -25,7 +39,28 @@ offset_left = 170.0
 offset_top = 162.0
 offset_right = 310.0
 offset_bottom = 212.0
-text = "Quit"
+pivot_offset = Vector2(68, 26)
+icon = ExtResource("3_n1do3")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
+[node name="Title" type="Node" parent="."]
+
+[node name="TitleLeft" type="Sprite2D" parent="Title"]
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("5_50hp6")
+offset = Vector2(512, 170)
+
+[node name="TitleRight" type="Sprite2D" parent="Title"]
+position = Vector2(480, 0.378358)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("6_aync6")
+offset = Vector2(-512, 168)
+
+[connection signal="mouse_entered" from="StartButton" to="." method="_on_start_button_mouse_entered"]
+[connection signal="mouse_exited" from="StartButton" to="." method="_on_start_button_mouse_exited"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="QuitButton" to="." method="_on_quit_button_mouse_entered"]
+[connection signal="mouse_exited" from="QuitButton" to="." method="_on_quit_button_mouse_exited"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
