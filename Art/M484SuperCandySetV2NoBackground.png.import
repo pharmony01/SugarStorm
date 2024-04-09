@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cat3g1eerp2l3"
-path="res://.godot/imported/M484SuperCandySetV2.png-0952b85769c6b612662f568979951686.ctex"
+uid="uid://bl3bctcdi4swu"
+path="res://.godot/imported/M484SuperCandySetV2NoBackground.png-556da8ed0684e834e65303549cadc816.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/M484SuperCandySetV2.png"
-dest_files=["res://.godot/imported/M484SuperCandySetV2.png-0952b85769c6b612662f568979951686.ctex"]
+source_file="res://Art/M484SuperCandySetV2NoBackground.png"
+dest_files=["res://.godot/imported/M484SuperCandySetV2NoBackground.png-556da8ed0684e834e65303549cadc816.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

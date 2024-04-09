@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://yjdg7agivgic"]
+
+[ext_resource type="Texture2D" uid="uid://bl3bctcdi4swu" path="res://Art/M484SuperCandySetV2NoBackground.png" id="1_mkgou"]
+
+[sub_resource type="GDScript" id="GDScript_ockbo"]
+script/source = "extends Character
+"
+
+[node name="enemy_test" type="Node2D"]
+script = SubResource("GDScript_ockbo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("1_mkgou")
