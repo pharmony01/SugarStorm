@@ -200,5 +200,3 @@ autoplay = true
 
 [node name="Character" parent="." instance=ExtResource("6_l3q5s")]
 position = Vector2(280, 147)
-acceleration = 40
-max_speed = 100
