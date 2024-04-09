@@ -1,19 +1,15 @@
 extends Character
 
+var speed = 0.05
+var target_position
+var player_position
+
 func _process(_delta):
 	look_at(get_global_mouse_position())
+
+func _on_player_position_changed(player_position_function):
+	player_position = player_position_function
+	target_position = (player_position - position).normalized()
 	
-
-
-func _on_player_moved(player_new_position):
-	pass
-	# Calculate direction vector from enemy to player
-	# var direction = player.global_position - global_position
-	# Normalize the direction vector
-	# direction = direction.normalized()
-	# Calculate movement vector
-	# var movement = direction * speed * delta
-		# Move the enemy
-	# move_and_slide(movement)
-	# calculate the direction of the player using 'player_new_position'
-	# and multiply the result with the enemy speed and plug it all in move_and_slide()
+	if position.distance_to(player_position) > 3:
+		move_and_collide(target_position * speed)

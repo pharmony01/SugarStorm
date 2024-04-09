@@ -24,4 +24,12 @@ shape = SubResource("RectangleShape2D_s2acx")
 [node name="FiniteStateMachine" parent="." index="2"]
 script = ExtResource("4_lryuu")
 
-[connection signal="position_changed" from="." to="." method="_on_position_changed"]
+[node name="DashTimer" type="Timer" parent="." index="3"]
+wait_time = 0.2
+one_shot = true
+
+[node name="CanDashTimer" type="Timer" parent="." index="4"]
+wait_time = 3.0
+
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="CanDashTimer" to="." method="_on_can_dash_timer_timeout"]
