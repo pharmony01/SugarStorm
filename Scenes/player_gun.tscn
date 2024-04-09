@@ -10,3 +10,6 @@ script = ExtResource("1_7ygvf")
 position = Vector2(-22, -37)
 scale = Vector2(0.212454, 0.212454)
 texture = ExtResource("2_jgylf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-45, 56, 54, 56, 54, -87, 33, -125, -57, -125, -62, -123, -73, -104, -73, 28)
