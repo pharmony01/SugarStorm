@@ -23,10 +23,15 @@ func _ready():
 	pass
 	
 func _physics_process(delta):
+	var player = $Player
+	
 	var space_state = get_world_2d().direct_space_state
-	var query = PhysicsRayQueryParameters2D.create(position, get_global_mouse_position())
-	query.exclude=[$Player]
+
+	var query = PhysicsRayQueryParameters2D.create(player.position, (10000*get_global_mouse_position()))
+
+	query.exclude=[player]
 	var result = space_state.intersect_ray(query)
+
 	
 	if result.size() > 0:
 		for i in range(result.size()):

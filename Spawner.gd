@@ -1,10 +1,27 @@
 extends Node
 
 var enemy_scene = preload("res://Characters/enemy_test_test.tscn")
+var enemy_scene_2 = preload("res://Characters/enemy_2.tscn")
 
 
 func _spawn_enemy():
-	var enemy_instance = enemy_scene.instantiate()
+	var enemy_instance
+	var random_int = randi_range(0,1)
+	if random_int == 0:
+		enemy_instance = enemy_scene.instantiate()
+	else:
+		enemy_instance = enemy_scene_2.instantiate()
+	var tween = get_tree().create_tween()
+	# Custom color
+	# var modulate_color : Color
+	var color_r = randf_range(0, 1) # RGB is the color
+	var color_g = randf_range(0, 0.8)
+	var color_b = randf_range(0, 0.8)
+	var modulate_color = Color(color_r, color_g, color_b)
+	# var modulate_color_a = 1 # A is alpha aka transparency
+	# tween.tween_property(enemy_instance, "modulate", Color.RED, 1)
+	tween.tween_property(enemy_instance, 'modulate', modulate_color, 0)
+	
 	var player = $"../Player"
 
 	$"..".add_child(enemy_instance)

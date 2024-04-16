@@ -12,4 +12,4 @@ func _on_player_position_changed(delta, player_position_function):
 	target_position = (player_position - position).normalized()
 	
 	if position.distance_to(player_position) > 3:
-		move_and_collide(target_position * speed * delta)
+		move_and_collide(target_position * speed * delta)	
