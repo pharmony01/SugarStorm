@@ -5,7 +5,7 @@ var i = 0
 
 func _process(_delta):
 	i = i + 1
-	if i % 100 == 0:
+	if i % 10 == 0:
 		$Spawner.spawn_enemy()
 
 func _ready():
@@ -24,15 +24,12 @@ func _ready():
 	
 func _physics_process(delta):
 	var space_state = get_world_2d().direct_space_state
-	
 	var query = PhysicsRayQueryParameters2D.create(position, get_global_mouse_position())
-	
-	var collision = get_world_2d().direct_space_state.intersect_ray(query)
-	
+	query.exclude=[$Player]
 	var result = space_state.intersect_ray(query)
 	
-	# print(result)
+	if result.size() > 0:
+		for i in range(result.size()):
+			var collider = result["collider"]
+			collider.queue_free()
 	
-	for item in result:
-		var value = result[item]
-		print("Key:", item, "\nValue:", value)
