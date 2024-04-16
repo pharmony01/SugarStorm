@@ -6,10 +6,10 @@ const GRENADE_SPEED = 500.0
 signal position_changed(position)
 var CanDash: bool = true
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	# var mouse_direction: Vector2 = (get_global_mouse_position() - global_position).normalized()
 	look_at(get_global_mouse_position())
-	position_changed.emit(position)
+	position_changed.emit(delta, position)
 	
 	# MEGA TESTING CAUSE BORED
 	if position.x < -30:
