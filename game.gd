@@ -5,7 +5,7 @@ var i = 0
 
 func _process(_delta):
 	i = i + 1
-	if i % 10 == 0:
+	if i % 25 == 0:
 		$Spawner.spawn_enemy()
 
 func _ready():
@@ -20,21 +20,24 @@ func _ready():
 		#if selected_spawn.global_position != $Enemy.position:
 			#break
 	#$Enemy2.position = selected_spawn.global_position
-	pass
+	$Player.connect("railgun", self.delete_things)
 	
-func _physics_process(delta):
+	
+#func _physics_process(delta):
+	#var player = $Player
+	#var space_state: PhysicsDirectSpaceState2D = get_world_2d().direct_space_state
+	#var query: PhysicsRayQueryParameters2D = PhysicsRayQueryParameters2D.create(player.position, player.position + (get_global_mouse_position() - player.position).normalized() * 1000)
+	#query.exclude=[player]
+	#var result: Dictionary = space_state.intersect_ray(query)
+			
+	
+func delete_things():
 	var player = $Player
-	
-	var space_state = get_world_2d().direct_space_state
-
-	var query = PhysicsRayQueryParameters2D.create(player.position, (10000*get_global_mouse_position()))
-
+	var space_state: PhysicsDirectSpaceState2D = get_world_2d().direct_space_state
+	var query: PhysicsRayQueryParameters2D = PhysicsRayQueryParameters2D.create(player.position, player.position + (get_global_mouse_position() - player.position).normalized() * 1000)
 	query.exclude=[player]
-	var result = space_state.intersect_ray(query)
-
-	
+	var result: Dictionary = space_state.intersect_ray(query)
 	if result.size() > 0:
-		for i in range(result.size()):
+		for j in range(result.size()):
 			var collider = result["collider"]
 			collider.queue_free()
-	

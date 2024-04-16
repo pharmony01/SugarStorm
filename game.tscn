@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://comq3jnuvx1ac"]
+[gd_scene load_steps=12 format=3 uid="uid://comq3jnuvx1ac"]
 
 [ext_resource type="Texture2D" uid="uid://b68hrpuhe54dk" path="res://Art/TopDownHouse_FloorsAndWalls.png" id="1_cgp4y"]
 [ext_resource type="Script" path="res://game.gd" id="1_daqdh"]
 [ext_resource type="PackedScene" uid="uid://b8kyv1fl41q2c" path="res://Characters/player.tscn" id="1_jrvbb"]
 [ext_resource type="AudioStream" uid="uid://bryvl37oegbrd" path="res://Music/Sergio%27s Magic Dustbin.mp3" id="4_2vauw"]
+[ext_resource type="AudioStream" uid="uid://yy1rfbkqge6i" path="res://Music/Pew_Sound_Effect.mp3" id="4_ih3es"]
 [ext_resource type="AudioStream" uid="uid://dbuax72et4vvh" path="res://Music/Voxel Revolution.mp3" id="5_tryab"]
 [ext_resource type="PackedScene" uid="uid://cvcxu8xeuf6lj" path="res://Characters/enemy_test_test.tscn" id="6_l3q5s"]
 [ext_resource type="Script" path="res://Spawner.gd" id="7_108iy"]
@@ -193,6 +194,10 @@ layer_0/tile_data = PackedInt32Array(0, 196612, 6, 65536, 196612, 6, 131072, 196
 
 [node name="Player" parent="." instance=ExtResource("1_jrvbb")]
 position = Vector2(245, 142)
+
+[node name="GunSound" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("4_ih3es")
+max_polyphony = 30
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2(0.997208, 0.991685)

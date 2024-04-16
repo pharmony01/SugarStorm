@@ -4,7 +4,14 @@ const LASER_SPEED = 1000.0
 const GRENADE_SPEED = 500.0
 
 signal position_changed(position)
+signal railgun()
 var CanDash: bool = true
+	
+func _on_raycast_collision(result):
+	if result.size() > 0:
+		for i in range(result.size()):
+			var collider = result["collider"]
+			collider.queue_free()
 
 func _process(delta: float) -> void:
 	# var mouse_direction: Vector2 = (get_global_mouse_position() - global_position).normalized()
@@ -33,8 +40,10 @@ func get_input() -> void:
 		mov_direction += Vector2.RIGHT
 	if Input.is_action_pressed("move_up"):
 		mov_direction += Vector2.UP
+	if Input.is_action_pressed("primary"):
+		railgun.emit()
 	if Input.is_action_just_pressed("primary"):
-		print("Shoot")
+		$GunSound.play()
 	if Input.is_action_just_pressed("secondary"):
 		print("Grenade")
 	if Input.is_action_just_pressed("dash") and CanDash == true:
