@@ -197,7 +197,7 @@ position = Vector2(245, 142)
 
 [node name="GunSound" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("4_ih3es")
-max_polyphony = 5
+max_polyphony = 30
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2(0.997208, 0.991685)

@@ -5,7 +5,7 @@ var i = 0
 
 func _process(_delta):
 	i = i + 1
-	if i % 10 == 0:
+	if i % 25 == 0:
 		$Spawner.spawn_enemy()
 
 func _ready():
