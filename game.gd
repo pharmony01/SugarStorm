@@ -5,8 +5,7 @@ var seconds_since_start = 0
 var iterator = 0
 
 func _process(_delta):
-	print(seconds_since_start)
-	seconds_since_start = float(Time.get_ticks_msec()) / 1000.0
+	seconds_since_start = Time.get_ticks_msec() / 1000.0
 	iterator = iterator + 1
 	if seconds_since_start < 10:
 		if iterator % 25 == 0:
