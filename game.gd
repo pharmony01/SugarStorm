@@ -1,11 +1,20 @@
 extends Node2D
 
 #var enemy_scene = preload("res://Characters/enemy_test_test.tscn")
-var i = 0
+var seconds_since_start = 0
+var iterator = 0
 
 func _process(_delta):
-	i = i + 1
-	if i % 25 == 0:
+	print(seconds_since_start)
+	seconds_since_start = float(Time.get_ticks_msec()) / 1000.0
+	iterator = iterator + 1
+	if seconds_since_start < 10:
+		if iterator % 25 == 0:
+			$Spawner.spawn_enemy()
+	elif seconds_since_start < 20:
+		if iterator % 10 == 0:
+			$Spawner.spawn_enemy()
+	else:
 		$Spawner.spawn_enemy()
 	
 
