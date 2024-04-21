@@ -202,7 +202,7 @@ max_polyphony = 30
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2(0.997208, 0.991685)
 stream = SubResource("AudioStreamRandomizer_8ln48")
-volume_db = -18.231
+volume_db = 8.0
 autoplay = true
 
 [node name="Enemy" parent="." instance=ExtResource("6_l3q5s")]
@@ -228,3 +228,5 @@ position = Vector2(34, 26)
 
 [node name="Spawner" type="Node" parent="."]
 script = ExtResource("7_108iy")
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

@@ -41,3 +41,7 @@ func delete_things():
 		for j in range(result.size()):
 			var collider = result["collider"]
 			collider.queue_free()
+
+
+func _on_audio_stream_player_2d_finished():
+	$AudioStreamPlayer2D.play() # Replace with function body.
