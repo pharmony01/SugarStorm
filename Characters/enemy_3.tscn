@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://mkr8fx1rb4uj"]
+
+[ext_resource type="PackedScene" uid="uid://kx3nwrg1qwcv" path="res://Characters/character.tscn" id="1_ldq1v"]
+[ext_resource type="Script" path="res://Characters/enemy_3.gd" id="2_dwkom"]
+[ext_resource type="Texture2D" uid="uid://bl3bctcdi4swu" path="res://Art/M484SuperCandySetV2NoBackground.png" id="3_gudpe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r7mvt"]
+radius = 8.0
+
+[node name="Character" instance=ExtResource("1_ldq1v")]
+script = ExtResource("2_dwkom")
+
+[node name="Sprite2D" parent="." index="0"]
+rotation = 1.5708
+texture = ExtResource("3_gudpe")
+region_enabled = true
+region_rect = Rect2(600, 35, 32, 17)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CapsuleShape2D_r7mvt")
