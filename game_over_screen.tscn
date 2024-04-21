@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://55tlgbkib3jj"]
+[gd_scene load_steps=5 format=3 uid="uid://dhs6ubwfsia1l"]
 
 [ext_resource type="Script" path="res://game_over_screen.gd" id="1_b3im1"]
 [ext_resource type="Texture2D" uid="uid://dnc54akbdx464" path="res://Art/background_image.png" id="2_y63pv"]
@@ -21,6 +21,7 @@ texture = ExtResource("2_y63pv")
 offset = Vector2(511.677, 227.656)
 
 [node name="ContinueButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 170.0
 offset_top = 200.0
 offset_right = 310.0
@@ -45,6 +46,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="EnemiesKilled" type="Label" parent="."]
+layout_mode = 0
 offset_top = 145.0
 offset_right = 480.0
 offset_bottom = 190.0

@@ -3,6 +3,7 @@ extends Node
 var enemy_scene = preload("res://Characters/enemy_test_test.tscn")
 var enemy_scene_2 = preload("res://Characters/enemy_2.tscn")
 var enemy_scene_3 = preload("res://Characters/enemy_3.tscn")
+var enemy_scene_4 = preload("res://Characters/enemy_4.tscn")
 
 # How far enemies spawn from the player
 var radius = 480
@@ -10,13 +11,15 @@ var radius = 480
 
 func _spawn_enemy():
 	var enemy_instance
-	var random_int = randi_range(0,2)
+	var random_int = randi_range(0,3)
 	if random_int == 0:
 		enemy_instance = enemy_scene.instantiate()
 	elif random_int == 1:
 		enemy_instance = enemy_scene_2.instantiate()
-	else:
+	elif random_int == 2:
 		enemy_instance = enemy_scene_3.instantiate()
+	else:
+		enemy_instance = enemy_scene_4.instantiate()
 	var tween = get_tree().create_tween()
 	# Custom color
 	# var modulate_color : Color
