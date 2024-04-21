@@ -6,6 +6,7 @@ var iterator = 0
 
 var total_kills = 0
 
+
 func _process(_delta):
 	seconds_since_start = Time.get_ticks_msec() / 1000.0
 	iterator = iterator + 1

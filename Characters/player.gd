@@ -7,7 +7,8 @@ signal position_changed(position)
 signal railgun()
 var CanDash: bool = true
 var CanShoot: bool = true
-	
+
+
 func _on_raycast_collision(result):
 	if result.size() > 0:
 		for i in range(result.size()):
@@ -84,3 +85,6 @@ func _on_muzzle_flash_timer_timeout():
 
 func _on_shoot_timer_timeout():
 	CanShoot = true
+
+func wtf():
+	print("5")
