@@ -6,6 +6,7 @@ const GRENADE_SPEED = 500.0
 signal position_changed(position)
 signal railgun()
 var CanDash: bool = true
+var CanShoot: bool = true
 	
 func _on_raycast_collision(result):
 	if result.size() > 0:
@@ -40,8 +41,10 @@ func get_input() -> void:
 		mov_direction += Vector2.RIGHT
 	if Input.is_action_pressed("move_up"):
 		mov_direction += Vector2.UP
-	if Input.is_action_pressed("primary"):
+	if Input.is_action_pressed("primary") and CanShoot == true:
 		railgun.emit()
+		CanShoot = false
+		$ShootTimer.start()
 	if Input.is_action_just_pressed("primary"):
 		$GunSound.play()
 		$MuzzleFlash.show()
@@ -67,3 +70,7 @@ func _on_can_dash_timer_timeout():
 
 func _on_muzzle_flash_timer_timeout():
 	$MuzzleFlash.hide()
+
+
+func _on_shoot_timer_timeout():
+	CanShoot = true

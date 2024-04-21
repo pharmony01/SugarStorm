@@ -7,6 +7,7 @@ func _process(_delta):
 	i = i + 1
 	if i % 25 == 0:
 		$Spawner.spawn_enemy()
+	
 
 func _ready():
 	#var enemy = enemy_scene.instantiate()
