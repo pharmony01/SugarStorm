@@ -27,6 +27,7 @@ window/size/viewport_height=270
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 mouse_cursor/custom_image="res://Art/crosshair_3.png"
+mouse_cursor/custom_image_hotspot=Vector2(16, 16)
 
 [input]
 
