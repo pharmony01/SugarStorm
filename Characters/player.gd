@@ -19,6 +19,9 @@ func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 	position_changed.emit(delta, position)
 	
+	for i in get_slide_collision_count():
+		get_tree().quit()
+	
 	# MEGA TESTING CAUSE BORED
 	if position.x < -30:
 		position.x = 510
