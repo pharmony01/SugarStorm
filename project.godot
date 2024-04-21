@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/image="res://Art/candyLoadingScreen.png"
 config/icon="res://icon.svg"
 
+[autoload]
+
+WtfASingleton="*res://wtf_a_singleton.gd"
+
 [display]
 
 window/size/viewport_width=480

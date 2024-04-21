@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cix6cufshf870"]
+
+[ext_resource type="Script" path="res://wtf_a_singleton.gd" id="1_taoyj"]
+
+[node name="wtf_a_singleton" type="Node"]
+script = ExtResource("1_taoyj")

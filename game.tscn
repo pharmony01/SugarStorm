@@ -207,10 +207,14 @@ autoplay = true
 
 [node name="Enemy" parent="." instance=ExtResource("6_l3q5s")]
 position = Vector2(533, 114)
+acceleration = 40
+max_speed = 100
 
 [node name="Enemy2" parent="." instance=ExtResource("6_l3q5s")]
 modulate = Color(0.835294, 0.207843, 0.745098, 1)
 position = Vector2(535, 74)
+acceleration = 40
+max_speed = 100
 
 [node name="EnemyLocations" type="Node2D" parent="."]
 
