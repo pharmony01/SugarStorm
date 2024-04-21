@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://55tlgbkib3jj"]
+[gd_scene load_steps=4 format=3 uid="uid://55tlgbkib3jj"]
 
 [ext_resource type="Script" path="res://game_over_screen.gd" id="1_b3im1"]
 [ext_resource type="Texture2D" uid="uid://dnc54akbdx464" path="res://Art/background_image.png" id="2_y63pv"]
+[ext_resource type="Texture2D" uid="uid://c70ebp18pvtnw" path="res://Art/continue_button.png" id="3_dtrv1"]
 
 [node name="game_over_screen" type="Control"]
 layout_mode = 3
@@ -17,3 +18,29 @@ position = Vector2(-0.00036298, 0)
 scale = Vector2(0.469875, 0.593)
 texture = ExtResource("2_y63pv")
 offset = Vector2(511.677, 227.656)
+
+[node name="ContinueButton" type="Button" parent="."]
+offset_left = 170.0
+offset_top = 200.0
+offset_right = 310.0
+offset_bottom = 250.0
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(67, 25)
+icon = ExtResource("3_dtrv1")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="TimeLived" type="Label" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 50.0
+offset_right = 479.0
+offset_bottom = 75.0
+text = "EXAMPLE TEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="ContinueButton" to="." method="_on_continue_button_mouse_entered"]
+[connection signal="mouse_exited" from="ContinueButton" to="." method="_on_continue_button_mouse_exited"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
