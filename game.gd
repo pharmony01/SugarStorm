@@ -4,6 +4,8 @@ extends Node2D
 var seconds_since_start = 0
 var iterator = 0
 
+var total_kills = 0
+
 func _process(_delta):
 	seconds_since_start = Time.get_ticks_msec() / 1000.0
 	iterator = iterator + 1
@@ -47,6 +49,7 @@ func delete_things():
 	query.exclude=[player]
 	var result: Dictionary = space_state.intersect_ray(query)
 	if result.size() > 0:
+		total_kills += 1
 		for j in range(result.size()):
 			var collider = result["collider"]
 			collider.queue_free()

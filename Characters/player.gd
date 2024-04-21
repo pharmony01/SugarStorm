@@ -25,8 +25,6 @@ func _process(delta: float) -> void:
 	# This *might* break so check if dying instantly
 	if get_slide_collision_count() > 0:
 		get_tree().change_scene_to_file("res://game_over_screen.tscn")
-		print("DIED")
-		print(Time.get_ticks_msec() / 1000.0)
 		
 	# for i in get_slide_collision_count():
 		# get_tree().quit()
