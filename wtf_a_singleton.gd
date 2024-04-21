@@ -1,6 +1,7 @@
 extends Node
 
 var enemies_killed = 0
+var time_since_start = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

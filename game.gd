@@ -6,7 +6,8 @@ var iterator = 0
 
 
 func _process(_delta):
-	seconds_since_start = Time.get_ticks_msec() / 1000.0
+	seconds_since_start = (Time.get_ticks_msec() - $"/root/WtfASingleton".time_since_start) / 1000
+	print(seconds_since_start)
 	iterator = iterator + 1
 	if seconds_since_start < 10:
 		if iterator % 25 == 0:
@@ -30,6 +31,8 @@ func _ready():
 		#if selected_spawn.global_position != $Enemy.position:
 			#break
 	#$Enemy2.position = selected_spawn.global_position
+	$"/root/WtfASingleton".time_since_start = Time.get_ticks_msec()
+	$"/root/WtfASingleton".enemies_killed = 0
 	$Player.connect("railgun", self.delete_things)
 	
 	
