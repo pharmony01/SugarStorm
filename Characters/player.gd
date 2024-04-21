@@ -44,6 +44,8 @@ func get_input() -> void:
 		railgun.emit()
 	if Input.is_action_just_pressed("primary"):
 		$GunSound.play()
+		$MuzzleFlash.show()
+		$MuzzleFlashTimer.start()
 	if Input.is_action_just_pressed("secondary"):
 		print("Grenade")
 	if Input.is_action_just_pressed("dash") and CanDash == true:
@@ -61,3 +63,7 @@ func _on_dash_timer_timeout():
 
 func _on_can_dash_timer_timeout():
 	CanDash = true
+
+
+func _on_muzzle_flash_timer_timeout():
+	$MuzzleFlash.hide()
