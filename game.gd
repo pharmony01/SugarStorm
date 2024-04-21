@@ -7,7 +7,6 @@ var iterator = 0
 
 func _process(_delta):
 	seconds_since_start = (Time.get_ticks_msec() - $"/root/WtfASingleton".time_since_start) / 1000
-	print(seconds_since_start)
 	iterator = iterator + 1
 	if seconds_since_start < 10:
 		if iterator % 25 == 0:
