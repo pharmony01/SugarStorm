@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b62kjqhi2obnc"]
+
+[ext_resource type="PackedScene" uid="uid://kx3nwrg1qwcv" path="res://Characters/character.tscn" id="1_h7mj3"]
+[ext_resource type="Texture2D" uid="uid://bl3bctcdi4swu" path="res://Art/M484SuperCandySetV2NoBackground.png" id="2_6bjhn"]
+[ext_resource type="Script" path="res://Characters/enemy_5.gd" id="2_l2ofr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl8fi"]
+size = Vector2(12, 20)
+
+[node name="Character" instance=ExtResource("1_h7mj3")]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("2_l2ofr")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_6bjhn")
+region_enabled = true
+region_rect = Rect2(267, 177, 13, 21)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_pl8fi")
