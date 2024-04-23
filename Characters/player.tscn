@@ -27,10 +27,9 @@ script = ExtResource("4_lryuu")
 
 [node name="DashTimer" type="Timer" parent="." index="3"]
 wait_time = 0.2
-one_shot = true
 
 [node name="CanDashTimer" type="Timer" parent="." index="4"]
-wait_time = 3.0
+wait_time = 1.5
 
 [node name="MuzzleFlashTimer" type="Timer" parent="." index="5"]
 wait_time = 0.1
