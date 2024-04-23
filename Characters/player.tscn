@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8kyv1fl41q2c"]
+[gd_scene load_steps=8 format=3 uid="uid://b8kyv1fl41q2c"]
 
 [ext_resource type="PackedScene" uid="uid://kx3nwrg1qwcv" path="res://Characters/character.tscn" id="1_osqnv"]
 [ext_resource type="Script" path="res://Characters/player.gd" id="2_8t5e5"]
@@ -8,6 +8,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s2acx"]
 size = Vector2(23, 33)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a0b4h"]
+radius = 154.159
 
 [node name="Player" instance=ExtResource("1_osqnv")]
 collision_mask = 2
@@ -38,13 +41,23 @@ wait_time = 0.1
 [node name="ShootTimer" type="Timer" parent="." index="6"]
 wait_time = 0.1
 
-[node name="MuzzleFlash" type="Sprite2D" parent="." index="7"]
+[node name="HasDiedTimer" type="Timer" parent="." index="7"]
+
+[node name="MuzzleFlash" type="Sprite2D" parent="." index="8"]
 visible = false
 position = Vector2(40, 4)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("5_evecx")
 
+[node name="DeathNuke" type="Area2D" parent="." index="9"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="DeathNukeArea" type="CollisionShape2D" parent="DeathNuke" index="0"]
+shape = SubResource("CircleShape2D_a0b4h")
+
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="CanDashTimer" to="." method="_on_can_dash_timer_timeout"]
 [connection signal="timeout" from="MuzzleFlashTimer" to="." method="_on_muzzle_flash_timer_timeout"]
 [connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="HasDiedTimer" to="." method="_on_has_died_timer_timeout"]

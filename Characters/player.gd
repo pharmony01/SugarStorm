@@ -7,6 +7,8 @@ signal position_changed(position)
 signal railgun()
 var CanDash: bool = true
 var CanShoot: bool = true
+var HasDied: bool = false
+var Invincible: bool = false
 
 
 func _on_raycast_collision(result):
@@ -24,8 +26,17 @@ func _process(delta: float) -> void:
 	# This *might* break so check if dying instantly
 	# This *might* break so check if dying instantly
 	# This *might* break so check if dying instantly
-	if get_slide_collision_count() > 0:
-		get_tree().change_scene_to_file("res://game_over_screen.tscn")
+	if get_slide_collision_count() > 0 and Invincible == false:
+		if HasDied == false:
+			Invincible = true
+			$HasDiedTimer.start()
+			HasDied = true
+			for i in $DeathNuke.get_overlapping_bodies():
+				if i != $".":
+					$"/root/WtfASingleton".enemies_killed += 1
+					i.queue_free()
+		elif HasDied == true:
+			get_tree().change_scene_to_file("res://game_over_screen.tscn")
 		
 	# for i in get_slide_collision_count():
 		# get_tree().quit()
@@ -88,3 +99,7 @@ func _on_shoot_timer_timeout():
 
 func wtf():
 	print("5")
+
+
+func _on_has_died_timer_timeout():
+	Invincible = false
