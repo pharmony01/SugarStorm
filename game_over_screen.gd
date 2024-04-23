@@ -29,9 +29,9 @@ func _ready():
 		$Stars.set_texture(one_star)
 	elif survival_time < 40:
 		$Stars.set_texture(two_star)
-	elif survival_time < 55:
+	elif survival_time < 50:
 		$Stars.set_texture(three_star)
-	elif survival_time < 70:
+	elif survival_time < 60:
 		$Stars.set_texture(four_star)
 	else:
 		$Stars.set_texture(five_star)

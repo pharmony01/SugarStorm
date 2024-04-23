@@ -198,6 +198,7 @@ position = Vector2(245, 142)
 
 [node name="GunSound" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("4_ih3es")
+volume_db = -12.0
 max_polyphony = 30
 
 [node name="NukeSound" type="AudioStreamPlayer" parent="Player"]
@@ -207,7 +208,7 @@ volume_db = 5.0
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2(0.997208, 0.991685)
 stream = SubResource("AudioStreamRandomizer_8ln48")
-volume_db = -19.81
+volume_db = -12.0
 autoplay = true
 
 [node name="Enemy" parent="." instance=ExtResource("6_l3q5s")]
