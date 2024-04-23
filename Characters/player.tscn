@@ -43,19 +43,23 @@ wait_time = 0.1
 
 [node name="HasDiedTimer" type="Timer" parent="." index="7"]
 
-[node name="MuzzleFlash" type="Sprite2D" parent="." index="8"]
+[node name="NukeDropTimer" type="Timer" parent="." index="8"]
+wait_time = 0.6
+one_shot = true
+
+[node name="MuzzleFlash" type="Sprite2D" parent="." index="9"]
 visible = false
 position = Vector2(40, 1)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("5_evecx")
 
-[node name="m&mNuke" type="Sprite2D" parent="." index="9"]
+[node name="m&mNuke" type="Sprite2D" parent="." index="10"]
 visible = false
 position = Vector2(-1.43051e-06, 1)
 scale = Vector2(2.8, 2.8)
 texture = ExtResource("6_2q3mj")
 
-[node name="DeathNuke" type="Area2D" parent="." index="10"]
+[node name="DeathNuke" type="Area2D" parent="." index="11"]
 collision_layer = 3
 collision_mask = 3
 metadata/_edit_lock_ = true
@@ -69,3 +73,4 @@ metadata/_edit_lock_ = true
 [connection signal="timeout" from="MuzzleFlashTimer" to="." method="_on_muzzle_flash_timer_timeout"]
 [connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="HasDiedTimer" to="." method="_on_has_died_timer_timeout"]
+[connection signal="timeout" from="NukeDropTimer" to="." method="_on_nuke_drop_timer_timeout"]

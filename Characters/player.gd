@@ -29,13 +29,14 @@ func _process(delta: float) -> void:
 	if get_slide_collision_count() > 0 and Invincible == false:
 		if HasDied == false:
 			Invincible = true
+			var tween = get_tree().create_tween()
+			# tween.tween_property()
 			$"m&mNuke".visible = true
+			tween.tween_property($"m&mNuke", "scale", Vector2(1.4,1.4), 0.6)
 			$HasDiedTimer.start()
 			HasDied = true
-			for i in $DeathNuke.get_overlapping_bodies():
-				if i != $".":
-					$"/root/WtfASingleton".enemies_killed += 1
-					i.queue_free()
+			$NukeDropTimer.start()
+			
 		elif HasDied == true:
 			get_tree().change_scene_to_file("res://game_over_screen.tscn")
 		
@@ -104,3 +105,11 @@ func wtf():
 
 func _on_has_died_timer_timeout():
 	Invincible = false
+
+
+func _on_nuke_drop_timer_timeout():
+	for i in $DeathNuke.get_overlapping_bodies():
+		if i != $".":
+			$"/root/WtfASingleton".enemies_killed += 1
+			i.queue_free()
+	$"m&mNuke".visible = false
