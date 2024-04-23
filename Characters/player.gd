@@ -66,7 +66,7 @@ func get_input() -> void:
 		mov_direction += Vector2.RIGHT
 	if Input.is_action_pressed("move_up"):
 		mov_direction += Vector2.UP
-	if Input.is_action_pressed("primary") and CanShoot == true:
+	if Input.is_action_just_pressed("primary") and CanShoot == true:
 		railgun.emit()
 		CanShoot = false
 		$ShootTimer.start()
