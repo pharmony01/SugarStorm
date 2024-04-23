@@ -25,13 +25,13 @@ func _ready():
 	# NEEDS TO BE ADJUSTED #
 	########################
 	# Sets the amount of "stars" the player earned by criteria
-	if enemies_killed < 20:
+	if survival_time < 30:
 		$Stars.set_texture(one_star)
-	elif enemies_killed < 40:
+	elif survival_time < 40:
 		$Stars.set_texture(two_star)
-	elif enemies_killed < 60:
+	elif survival_time < 55:
 		$Stars.set_texture(three_star)
-	elif enemies_killed < 80:
+	elif survival_time < 70:
 		$Stars.set_texture(four_star)
 	else:
 		$Stars.set_texture(five_star)
