@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 			var tween = get_tree().create_tween()
 			# tween.tween_property()
 			$"m&mNuke".visible = true
-			tween.tween_property($"m&mNuke", "scale", Vector2(1.4,1.4), 0.6)
+			tween.tween_property($"m&mNuke", "scale", Vector2(0.7,0.7), 1.25)
 			$HasDiedTimer.start()
 			HasDied = true
 			$NukeDropTimer.start()

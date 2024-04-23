@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b8kyv1fl41q2c" path="res://Characters/player.tscn" id="1_jrvbb"]
 [ext_resource type="AudioStream" uid="uid://bryvl37oegbrd" path="res://Music/Sergio%27s Magic Dustbin.mp3" id="4_2vauw"]
 [ext_resource type="AudioStream" uid="uid://yy1rfbkqge6i" path="res://Music/Pew_Sound_Effect.mp3" id="4_ih3es"]
-[ext_resource type="AudioStream" uid="uid://d2gwoti1r8odd" path="res://Music/NukeSound.mp3" id="5_4ftrg"]
+[ext_resource type="AudioStream" uid="uid://t82rm1x2v5xh" path="res://Music/NukeSound.mp3" id="5_4ftrg"]
 [ext_resource type="AudioStream" uid="uid://dbuax72et4vvh" path="res://Music/Voxel Revolution.mp3" id="5_tryab"]
 [ext_resource type="PackedScene" uid="uid://cvcxu8xeuf6lj" path="res://Characters/enemy_test_test.tscn" id="6_l3q5s"]
 [ext_resource type="Script" path="res://Spawner.gd" id="7_108iy"]

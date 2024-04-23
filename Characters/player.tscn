@@ -42,9 +42,10 @@ wait_time = 0.1
 wait_time = 0.1
 
 [node name="HasDiedTimer" type="Timer" parent="." index="7"]
+wait_time = 1.5
 
 [node name="NukeDropTimer" type="Timer" parent="." index="8"]
-wait_time = 0.6
+wait_time = 1.25
 one_shot = true
 
 [node name="MuzzleFlash" type="Sprite2D" parent="." index="9"]
