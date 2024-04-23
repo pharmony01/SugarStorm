@@ -29,6 +29,7 @@ func _process(delta: float) -> void:
 	if get_slide_collision_count() > 0 and Invincible == false:
 		if HasDied == false:
 			Invincible = true
+			$"m&mNuke".visible = true
 			$HasDiedTimer.start()
 			HasDied = true
 			for i in $DeathNuke.get_overlapping_bodies():
