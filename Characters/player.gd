@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 	# This *might* break so check if dying instantly
 	if get_slide_collision_count() > 0 and Invincible == false:
 		if HasDied == false:
+			$NukeSound.play()
 			Invincible = true
 			var tween = get_tree().create_tween()
 			# tween.tween_property()
