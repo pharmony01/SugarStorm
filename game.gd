@@ -8,14 +8,21 @@ var iterator = 0
 func _process(_delta):
 	seconds_since_start = (Time.get_ticks_msec() - $"/root/WtfASingleton".time_since_start) / 1000
 	iterator = iterator + 1
-	if seconds_since_start < 10:
+	if seconds_since_start < 20:
+		if iterator % 33 == 0:
+			$Spawner.spawn_enemy()
+	elif seconds_since_start < 30:
 		if iterator % 25 == 0:
 			$Spawner.spawn_enemy()
-	elif seconds_since_start < 20:
+	elif seconds_since_start < 40:
+		if iterator % 20 == 0:
+			$Spawner.spawn_enemy()
+	elif seconds_since_start < 50:
 		if iterator % 10 == 0:
 			$Spawner.spawn_enemy()
 	else:
-		$Spawner.spawn_enemy()
+		if iterator % 5 == 0:
+			$Spawner.spawn_enemy()
 	
 
 func _ready():
