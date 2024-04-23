@@ -19,17 +19,6 @@ func _process(_delta):
 	
 
 func _ready():
-	#var enemy = enemy_scene.instantiate()
-	#var spawn_markers = $EnemyLocations.get_children()
-	#var selected_spawn = spawn_markers[randi() % spawn_markers.size()]
-	##enemy.position = selected_spawn.global_position
-	##add_child(enemy)
-	#$Enemy.position = selected_spawn.global_position
-	#for n in 10000:
-		#selected_spawn = spawn_markers[randi() % spawn_markers.size()]
-		#if selected_spawn.global_position != $Enemy.position:
-			#break
-	#$Enemy2.position = selected_spawn.global_position
 	$"/root/WtfASingleton".time_since_start = Time.get_ticks_msec()
 	$"/root/WtfASingleton".enemies_killed = 0
 	$Player.connect("railgun", self.delete_things)
