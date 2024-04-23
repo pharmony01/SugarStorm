@@ -212,9 +212,11 @@ volume_db = -12.0
 autoplay = true
 
 [node name="Enemy" parent="." instance=ExtResource("6_l3q5s")]
+visible = false
 position = Vector2(533, 114)
 
 [node name="Enemy2" parent="." instance=ExtResource("6_l3q5s")]
+visible = false
 modulate = Color(0.835294, 0.207843, 0.745098, 1)
 position = Vector2(535, 74)
 
