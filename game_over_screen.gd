@@ -9,6 +9,7 @@ var five_star = preload("res://Art/five_star.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$InputBlocker/InputBlockerTimer.start()
 	# How long the player lived
 	var survival_time = (Time.get_ticks_msec() - $"/root/WtfASingleton".time_since_start) / 1000
 	var enemies_killed = $"/root/WtfASingleton".enemies_killed
@@ -38,7 +39,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
@@ -52,3 +53,7 @@ func _on_continue_button_mouse_exited():
 
 func _on_continue_button_pressed():
 	get_tree().change_scene_to_file("res://title_screen.tscn")
+
+
+func _on_input_blocker_timer_timeout():
+	$InputBlocker.visible = false
